@@ -1,99 +1,177 @@
-header{
-    margin-left:65px;
-    width: 1200px;
-    height: 600px;
-    background: linear-gradient(to bottom, rgb(6 , 120, 175), rgb(0 ,227 ,217));
-}
-.nav{
-  height: 150px;
-  width:1200px;
-  display:flex;
-  justify-content:space-around;
+/* ---------- Desktop Default Styles ---------- */
+
+header {
+  margin: 0 auto;
+  width: 1200px;
+  height: 600px;
+  background: linear-gradient(to bottom, rgb(6, 120, 175), rgb(0, 227, 217));
 }
 
-.logo{
+.nav {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
   height: 80px;
   width: 80px;
-  margin-top: 15px;
-  background-color: blue;
-  background: url(LOGO.jpg);
+  background: url(logo.jpg);
   background-size: cover;
-  border-radius:50%;
+  border-radius: 50%;
   box-shadow: 2px 2px 2px 2px #015450;
 }
 
-.manu{
-  width:400px;
-  height:20px;
-  margin-top:30px;
+.menu {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  width: 400px;
+  flex-wrap: nowrap;
 }
-a{
+
+a {
   text-decoration: none;
-  color:white;
+  color: white;
   font-size: 20px;
-  text-shadow: 2px 2px 2px black;;
+  text-shadow: 2px 2px 2px black;
+  white-space: nowrap;
 }
-.button{
-  height: 25px;
-  width: 150px;
-  border-radius: 20px;
-  color: whitesmoke;
+
+.button {
   display: flex;
-  justify-content: center;
-  margin-top:25px;
+  border-radius: 20px;
   box-shadow: 2px 4px 2px black;
 }
-.con-button{
-  height:25px;
-  width:110px;
-  background-color:#00bcd4;
-  border-top-right-radius:20px;
-  border-bottom-right-radius:20px;
-  font-size: 20px;
-  border: 0.5px, solid, #63a59f;
-}
-.search-icon{
-  height:20px;
-  width:25px;
-  padding-left:10px;
-  padding-top:5px;
-  font-size: 16px;;
-  background-color:#00bcd4;
-  border-top-left-radius:20px;
-  border-bottom-left-radius:20px;
-  border: 0.5px, solid, #63a59f;
+
+.search-icon, .con-button {
+  background-color: #00bcd4;
+  border: 0.5px solid #63a59f;
+  color: white;
 }
 
-/* head description */
+.search-icon {
+  padding: 5px 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 16px;
+}
 
-.head-description h1{
-  padding-left:80px;
-  font-size:48px;
-  font-family: 'segoe ui', sans-serif;
+.con-button {
+  padding: 5px 15px;
+  font-size: 18px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.line1,.line2{
-  display:inline-block;
-  font-weight:bold;
-  text-shadow: 0 0 10px #00f0ff,0 0 20px #00e0ff;
 
+/* Head Description */
+
+.head-description h1 {
+  padding-left: 80px;
+  font-size: 48px;
+  font-family: 'Segoe UI', sans-serif;
 }
-.line2{
-  padding-left:140px;
-   font-family: 'Roboto';
+
+.line1, .line2 {
+  display: inline-block;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00e0ff;
 }
-.description{
+
+.line2 {
+  padding-left: 140px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.description {
   font-size: 18px;
   padding-left: 80px;
-  font-weight:30;
-  padding-top:20px;
+  font-weight: 300;
+  padding-top: 20px;
 }
-/*footer*/
 
-footer{
-  width: 1200px;
-  height: 30px;
-  padding-left:40%;
+.button2 {
+  height: 40px;
+  width: 180px;
+  border-radius: 10px;
+  padding: 8px 15px;
+  margin: 60px 0 0 80px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #229c1cf7;
+  color: white;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ---------- 📱 Mobile Responsive ---------- */
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .head-description h1 {
+    font-size: 28px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .line2 {
+    padding-left: 0;
+  }
+
+  .description {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .button2 {
+    margin: 30px auto;
+  }
+
+  footer {
+    font-size: 13px;
+    text-align: center;
+  }
 }
